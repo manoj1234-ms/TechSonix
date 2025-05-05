@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.913);
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    color: #077b32;
+    text-shadow: 0 0 10px #077b32;
+    margin-bottom: 20px;
+}
+
+#addSkillBtn {
+    width: 150px;
+    height: 40px;
+    background-color: #077b32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s linear;
+    margin-bottom: 20px;
+}
+
+#addSkillBtn:hover {
+    background-color: transparent;
+    color: #077b32;
+    border: 2px solid #077b32;
+    box-shadow: 0 0 20px #077b32;
+    filter: drop-shadow(0 0 10px #077b32);
+    transform: scale(1.1);
+}
+
+#skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skillItem {
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-shadow: 0 0 15px #077b32;
+    transition: transform 0.3s ease;
+}
+
+.skillItem:hover {
+    transform: scale(1.05);
+}

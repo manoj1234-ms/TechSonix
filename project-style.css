@@ -1,0 +1,105 @@
+.projects-section {
+  padding: 40px 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  min-height: 90vh;
+}
+
+.projects-section h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #077b32;
+  text-shadow: 0 0 10px #077b32;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-item {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #077b32;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+.project-item h2 {
+  color: #077b32;
+  margin-bottom: 15px;
+}
+
+.project-item p {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+#addProjectBtn {
+  background-color: #077b32;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+#addProjectBtn:hover {
+  background-color: #055a22;
+}
+
+#projectForm {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #077b32;
+  max-width: 400px;
+  margin: 0 auto 30px auto;
+  color: white;
+}
+
+#projectForm label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+#projectForm input[type="text"],
+#projectForm textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #077b32;
+  background-color: #222;
+  color: white;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+#projectForm button[type="submit"] {
+  background-color: #077b32;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#projectForm button[type="submit"]:hover {
+  background-color: #055a22;
+}

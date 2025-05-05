@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects - Manoj Sharma</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="project-style.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                Manoj <span>Sharma</span>
+            </div>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="Project.html">Projects</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="projects-section">
+        <h1>My Projects</h1>
+        <button id="addProjectBtn">Add New Project</button>
+        <form id="projectForm" style="display:none; margin-top: 20px;">
+            <label for="projectName">Project Name:</label><br />
+            <input type="text" id="projectName" name="projectName" required /><br />
+            <label for="projectDir">Project Directory:</label><br />
+            <input type="text" id="projectDir" name="projectDir" required /><br />
+            <label for="projectDesc">Project Description:</label><br />
+            <textarea id="projectDesc" name="projectDesc" rows="4" required></textarea><br />
+            <button type="submit">Submit</button>
+        </form>
+        <div class="projects-container" id="projectsContainer">
+            <div class="project-item">
+                <h2>Text-Editor</h2>
+                <p>Edit text , convert text in upper and lower.</p>
+                <button class="remove-btn">Remove</button>
+            </div>
+            <div class="project-item">
+                <h2>Insa- clone</h2>
+                <p>Check follower,upload post and more.</p>
+                <button class="remove-btn">Remove</button>
+            </div>
+            <div class="project-item">
+                <h2>Travel-Story</h2>
+                <p>Memorize your journey's add journey details</p>
+                <button class="remove-btn">Remove</button>
+            </div>
+            <div class="project-item">
+                <h2>E-notebook</h2>
+                <p>Using mern create a notebook in which we can add our important data.</p>
+                <button class="remove-btn">Remove</button>
+            </div>
+        
+        </div>
+    </section>
+    
+    <div id="confirmationMessage" style="color: #077b32; text-align: center; margin-bottom: 20px; display: none;"></div>
+    <script src="script.js"></script> 
+</body>
+</html>
