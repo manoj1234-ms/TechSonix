@@ -18,18 +18,36 @@ const texts = [
 const speed = 100; // typing speed in milliseconds
 const textElement  = document.querySelector('.typewriter-text'); // clear the text before starting
 
-let textIndex = 0; // current text index
-let charIndex = 0; // current character index
+if (textElement) {
+    let textIndex = 0; // current text index
+    let charIndex = 0; // current character index
 
-function typewriter() {
-    if(charIndex < texts[textIndex].length) {
-        textElement.textContent += texts[textIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(typewriter, speed);
+    function typewriter() {
+        if(charIndex < texts[textIndex].length) {
+            textElement.textContent += texts[textIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(typewriter, speed);
+        }
+        else{
+            setTimeout(eraseText,1000);
+        }
     }
-    else{
-        setTimeout(eraseText,1000);
+
+    function eraseText() {
+        if(textElement.innerHTML.length > 0) {
+            textElement.innerHTML = textElement.innerHTML.slice(0,-1);
+            setTimeout(eraseText, 50);
+        }
+        else{
+            textIndex = (textIndex + 1) % texts.length; // move to the next text
+            charIndex = 0; // reset character index
+            setTimeout(typewriter, 500); // wait before starting to type the next text
+        }
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        typewriter();
+    });
 }
 
 function eraseText() {
